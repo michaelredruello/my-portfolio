@@ -1,0 +1,23 @@
+---
+// components/AnimatedBackground.astro
+---
+<style>
+  .animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure it stays behind other content */
+    background: linear-gradient(135deg, #ff0080, #ff8c00);
+    animation: move 5s linear infinite;
+    overflow: hidden;
+  }
+
+  @keyframes move {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+</style>
+
+<div class="animated-background"></div>
